@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Emmanuel Amodu">
+        <title> KWSG Housing application form</title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+        <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+		
+        <link rel="stylesheet" href="../assets/css/style.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <!-- Favicon and touch icons -->
+    </head>
+    <body>
+    
+		<!-- Top menu -->
+		
+
+        <!-- Top content -->
+        <div class="top-content">
+        	
+            <div class="inner-bg">
+                <div class="container">
+                    <div class="row">
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 col-sm-offset-3 form-box">
+                        	<div class="form-top">
+                        		<div class="form-top-left">
+                        			<h3>HOMEOWNER MASS HOUSING APPLICATION FORM</h3>
+                            		<p>This form is solely to assess potential demand in home-ownership. The information you provide is being submitted directly to the Kwara State Government therefore your information will not be shared with any private partners for marketing purposes. All the submissions will thereafter be collated and summarized, with no indication of names. 
+                                    Note that non-indigenes may also respond provided they have been or are currently resident in Ilorin for a period of time.
+                                    </p>
+                        		</div>
+                            </div>
+                            <div class="form-bottom">
+                                <h3 style="color: white;">Ensure every field is filled as incomplete forms would be completely disregarded</h3>
+			                    <form action="adddatabase.php" method="post" name="myform" onsubmit="return(validate());">
+			                    	<div class="form-group"><p>1: Name</p>
+			                        	<input type="text" name="Name" placeholder="Name..." class="form-control" required>
+			                        </div>
+			                        <div class="form-group"><p>2: Age</p>
+			                        	<input type="number" min="18" size="6" name="Age" placeholder="Age..." class="form-control" required>
+			                        </div>
+                                    <div class="form-group"><p>3: Sex</p>
+                                       <input type="radio" name="Gender" value="male" required> &nbsp; <pre class="radio-inline">Male</pre> &nbsp; &nbsp; &nbsp; 
+                                       <input type="radio" name="Gender" value="female" required> &nbsp; <pre class="radio-inline">Female</pre>
+                                    </div>
+			                         <div class="form-group"><p>4: Residential Address</p>
+                                        <input type="text" name="ResAddr" placeholder="Address..." class="form-control" required>
+                                    </div>
+                                    <div class="form-group"><p>5: Are you a Kwaran</p>
+                                        <input type="radio" name="LGAOrigin" value="Yes, I am a Kwaran" required> &nbsp; <pre class="radio-inline">Yes, I am a Kwaran</pre> &nbsp; &nbsp; &nbsp;
+                                        <input type="radio" name="LGAOrigin" value="No, I am not a Kwaran" required> &nbsp; <pre class="radio-inline">No, I am not a Kwaran</pre>
+                                    </div>
+                                    <div class="form-group"><p>6: LGA of Residence</p>
+                                        <input type="text" name="LGARes" placeholder="LGA of Residence..." class="form-control" required> 
+                                    </div>
+                                    <div class="form-group"><p>7: Telephone No</p>
+                                        <input type="number" name="TelNo" placeholder="Telephone No..." class="form-control" required>
+                                    </div>
+                                    <div class="form-group"><p>8: E-mail</p>
+                                        <input type="email" name="Email" placeholder="E-mail..." class="form-control" required>
+                                    </div>
+                                    <div class="form-group"><p>9: KRIN or Staff No (If government employee)</p>
+                                        <input type="text" name="StaffNo" placeholder="PSN orStaff No..." class="contact-subject">
+                                          Other
+                                        <input type="text" name="StaffNoother" placeholder="Other..." class="contact-subject">
+                                    </div>
+                                    <div class="form-group"><p>10: work address</p>
+                                        <input type="text" name="WorkAddr" placeholder="Place of work address..." class="form-control" required>
+                                    </div>
+                                    <div class="form-group"><p>11: Expected year of retirement</p>
+                                        <input type="number"  min="1990" max="2099" name="RetirementYear" placeholder="Expected year of retirement..." class="form-control" required>
+                                    </div>
+                                    <div class="form-group"><p>12: Level of monthly income (individual): </p>
+                                        <input type="radio" name="Income" value="Below N20,000" required> &nbsp;<pre class="radio-inline">Below ₦20,000</pre> &nbsp; 
+                                        <input type="radio" name="Income" value="N20,000-N30,000" required>&nbsp;<pre class="radio-inline">₦20,000-₦30,000</pre> &nbsp; 
+                                        <input type="radio" name="Income" value="N30,000-N40,000" required>&nbsp;<pre class="radio-inline">₦30,000-₦40,000</pre> &nbsp; 
+                                        <input type="radio" name="Income" value="N40,000-N50,000" required>&nbsp;<pre class="radio-inline">₦40,000-₦50,000</pre> &nbsp;    <br /><br />
+                                        <input type="radio" name="Income" value="N50,000-N60,000" required>&nbsp;<pre class="radio-inline">₦50,000-₦60,000</pre> &nbsp; 
+                                        <input type="radio" name="Income" value="N60,000-N100,000" required>&nbsp;<pre class="radio-inline">₦60,000-₦100,000</pre> &nbsp; 
+                                        <input type="radio" name="Income" value="N100,000-N200,000" required> &nbsp;<pre class="radio-inline">₦100,000-₦200,000</pre> &nbsp;
+                                        <input type="radio" name="Income" value="N200,000-N300,000" required> &nbsp;<pre class="radio-inline">₦200,000-₦300,000</pre> &nbsp;
+                                        <br /><br />
+                                        <input type="radio" name="Income" value="N300,000-N400,000" required> &nbsp;<pre  class="radio-inline">₦300,000-₦400,000</pre>&nbsp;
+                                        <input type="radio" name="Income" value="N400,000+" required> &nbsp;<pre  class="radio-inline">₦400,000+</pre>
+                                    </div>
+                                    <div class="form-group"><p>13: Marital Status: </p>
+                                        <input type="radio" name="maritalstat" value="single" required>&nbsp;<pre class="radio-inline">Single</pre> &nbsp; 
+                                        <input type="radio" name="maritalstat" value="Married" required>&nbsp;<pre class="radio-inline">Married</pre> &nbsp; 
+                                        <span>Number of children: </span><input type="text" name="noochildren" placeholder="Number of Children..." required>
+                                    </div>
+                                    
+                                    <div class="form-group"><p>14: Are you currently a Home owner</p>
+                                        <input type="radio" name="HomeOwnerStatus" value="Yes, I own a Home" required>&nbsp;<pre class="radio-inline">Yes, I own a Home</pre>&nbsp;&nbsp;&nbsp;
+                                        <input type="radio" name="HomeOwnerStatus" value="No, I do not own a Home" required>&nbsp;<pre class="radio-inline">No, I do not own a Home</pre>&nbsp;&nbsp;&nbsp;
+                                        <input type="radio" name="HomeOwnerStatus" value="Working towards it" required>&nbsp;<pre class="radio-inline">Working towards it</pre>&nbsp;&nbsp;&nbsp;
+                                    </div>
+                                    <div><p>15: Preferred type of building (Please tick all that apply) [Leaving this blank means selection would be done on your behalf]</p>
+                                        <input type="checkbox" name="HomeType1" value="One bedroom mini-flat">&nbsp;<pre class="checkbox-inline">One bedroom mini-flat</pre>&nbsp;&nbsp;&nbsp;
+                                        <input type="checkbox" name="HomeType2" value="Two Bedroom">&nbsp;<pre class="checkbox-inline">Two Bedroom</pre>&nbsp;&nbsp;&nbsp;
+                                        <input type="checkbox" name="HomeType3" value="Three Bedroom">&nbsp;<pre class="checkbox-inline">Three Bedroom</pre>&nbsp;&nbsp;&nbsp;
+                                        <input type="checkbox" name="HomeType4" value="Four Bedrooms">&nbsp;<pre class="checkbox-inline">Four Bedrooms</pre>&nbsp;&nbsp;&nbsp;
+                                        <input type="checkbox" name="HomeType5" value="Duplex">&nbsp;<pre class="checkbox-inline">Duplex</pre>&nbsp;&nbsp;&nbsp;   <br /><br />
+                                        <input type="checkbox" name="HomeType6" value="Bungalow">&nbsp;<pre class="checkbox-inline">Bungalow</pre>&nbsp;&nbsp;&nbsp;
+                                         Other
+                                        <input type="text" name="HomeType" placeholder="Other pls specify..." class="contact-subject" id="contact-subject">
+                                    </div>
+                                    <br>
+                                    <div class="form-group"><p>16: Select the desired range of home value</p>
+                                        <input type="radio" name="PaymentPower" value="N7-8M" required>&nbsp;<pre class="radio-inline">₦7-8M</pre>&nbsp;&nbsp;&nbsp;
+                                        <input type="radio" name="PaymentPower" value="N8-9M" required>&nbsp;<pre  class="radio-inline">₦8-9M</pre>&nbsp;&nbsp;&nbsp;
+                                        <input type="radio" name="PaymentPower" value="N9-10M" required>&nbsp;<pre  class="radio-inline">₦9-10M</pre>&nbsp;&nbsp;&nbsp;
+                                        <input type="radio" name="PaymentPower" value="N10-15M" required>&nbsp;<pre class="radio-inline">₦10-15M</pre>&nbsp;&nbsp;&nbsp;
+                                         <input type="radio" name="PaymentPower" value="15M+" required>&nbsp;<pre class="radio-inline">₦10-15M</pre>&nbsp;&nbsp;&nbsp;
+                                    </div>
+                                    <div class="form-group"><p>17: Mode of Payment (Please Tick)</p>
+                                        <input type="radio" name="PaymentMode" value="Outright purchase" required>&nbsp;<pre class="radio-inline">Outright purchase</pre>   &nbsp;&nbsp;&nbsp;
+                                        <input type="radio" name="PaymentMode" value="Monthly contribution" required>&nbsp;<pre class="radio-inline">Home Financing</pre>&nbsp;&nbsp;&nbsp;
+                                    </div>
+                                    <div class="form-group"><p>18: Are you currently servicing a loan for home ownership (mortgage)?</p>
+                                        <input type="radio" name="ServicingALoan" value="I am servicing a loan" required>&nbsp;<pre class="radio-inline">Yes</pre>          &nbsp;&nbsp;&nbsp;
+                                        <input type="radio" name="ServicingALoan" value="I am not servicing a loan" required>&nbsp;<pre class="radio-inline">No</pre>       &nbsp;&nbsp;&nbsp;
+                                    </div>
+                                    <div class="form-group"><p>19: If yes to 18, indicate value of morgage and home loaction:</p>
+                                        <input type="text" name="CoperativeLoan" placeholder="Value of morgage" class="form-control">
+                                        <br>
+                                        <input type="text" name="CoperativeLoan1" placeholder="Home Location" class="form-control">
+                                        <br />  
+                                        <p>20: What is the  interest rate and tenor of the home loan you are currently serving: </p>
+                                        <select class="form-contr" name="InterestRate">
+                                            <option value="" disabled selected>Select your interest rate.</option>
+                                            <option value="0-5%">0-5%</option>
+                                            <option value="5-10%">5-10%</option>
+                                            <option value="10-20%">10-20%</option>
+                                            <option value="20-40%">20-40%</option>
+                                            <option value="Above 40%">Above 40%...</option>
+                                        </select>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;
+                                        <select class="form-contr" id="sel1" name="TenorofMortgage">
+                                            <option value="" disabled selected>Tenor/Duration of mortgage/Loan.</option>
+                                            <option value="0-2 years">0-2 years</option>
+                                            <option value="2-5 years">2-5 years</option>
+                                            <option value="5-10 years">5-10 years</option>
+                                            <option value="10-20 years">10-20 years</option>
+                                            <option value="Above 20 years">Above 20 years...</option>
+                                        </select>
+                                         &nbsp;&nbsp;&nbsp;&nbsp;
+                                        <select class="form-contr" id="sel1" name="TimeonMortgage">
+                                            <option value="" disabled selected>Time remaining on morgage</option>
+                                            <option value="0-2 years">0-2 years</option>
+                                            <option value="2-5 years">2-5 years</option>
+                                            <option value="5-10 years">5-10 years</option>
+                                            <option value="10-20 years">10-20 years</option>
+                                            <option value="Above 20 years">Above 20 years...</option>
+                                        </select>
+                                        
+                                    </div>
+			                        <button type="submit" class="btn">Submit form</button>
+                                </form>
+                                <div>
+                                   <p>Note:</p>
+                                    <p>
+                                        This form may not necessarily constitute a direct indication of consideration when the housing project begins. This means that at the time the project is to begin, each person that has indicated interest by sending this form may be contacted to determine if they are still interested in homeownership. 
+                                        Ensure that the information is complete and accurate because once the form is sent it may not be recalled AND duplicate forms will be disregard as each initial form sent will be time-stamped.
+                                    </p>
+                                </div>
+		                    </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+
+        <!-- Javascript -->
+        <script src="../assets/js/jquery-1.11.1.min.js"></script>
+        <script src="../assets/js/jquery.backstretch.min.js"></script>
+        <script src="../assets/js/scripts.js"></script>
+        
+        <!--[if lt IE 10]>
+            <script src="assets/js/placeholder.js"></script>
+        <![endif]-->
+
+    </body>
+
+</html>

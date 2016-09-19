@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Emmanuel Amodu">
+        <title> KWSG Home builder form</title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+        <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+
+        <link rel="stylesheet" href="../assets/css/style.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <!-- Favicon and touch icons -->
+    </head>
+    <body>
+
+		<!-- Top menu -->
+		
+
+        <!-- Top content -->
+        <div class="top-content">
+        	
+            <div class="inner-bg">
+                <div class="container">
+                    <div class="row">
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 col-sm-offset-3 form-box">
+                        	<div class="form-top">
+                        		<div class="form-top-left">
+                        			<h3>BUILDER MASS HOUSING APPLICATION & ELIGIBILITY FORM</h3>
+                            		<p>
+                            		    Forms are solely to assess potential partners for the delivery of the mass housing project. The information you provide is being submitted directly to the Kwara State Government therefore your information will not be shared with any other private partners. All the submissions will thereafter be collated and summarized, for internal project decision-making only.
+                            		</p>
+                                    <p>
+                                        Note that this opportunity is open to all Corporation whho meet the eligibility criteria.
+                                    </p>
+                        		</div>
+                            </div>
+                            <div class="form-bottom">
+                                <h3 style="color: white;">Ensure every field is filled as incomplete forms will not be processed</h3>
+			                    <form action="adddatabase.php" method="post" name="myform" onsubmit="return(validate());">
+			                    	<div class="form-group"><p>1. Company/Consortium Name: </p>
+			                        	<input type="text" name="name" placeholder="Company Name..." class="form-control" required>
+			                        </div>
+			                        <div class="form-group"><p>2. Do you have a parent company? </p>
+			                        	<input type="text" name="Parentcompany" placeholder="If yes pls specify, if no leave blank..." class="form-control">
+			                        </div>
+                                    <div class="form-group"><p>3. How long have you been in the business of mass housing or estates? </p>
+			                        	<input type="text" name="yearsinbusiness" placeholder="Numeric figure in years e.g 10 years..." class="form-control" required>
+			                        </div>
+			                        <div class="form-group"><p>4. Address of Headquarters</p>
+                                        <input type="text" name="headquatersAddr" placeholder="Address of Headquarters..." class="form-control" required>
+                                    </div>
+                                    <div class="form-group"><p>5. Contact Information</p>
+                                        Primary contact person.
+                                        <input type="text" name="contactperson" placeholder="Contact person name..." required>
+                                        Number.
+                                        <input type="text" name="phoneNumber" placeholder="Telephone Number..." required><br><br>
+                                        E-mail.
+                                        <input type="text" name="email" placeholder="E-mail..." required>
+                                    </div>
+                                    <div><p>6. What types of homes do you prefer or specialize in? </p>
+                                        <input type="checkbox" name="homeSpecs1" value="One bedroom mini-flat">&nbsp;<pre class="radio-inline">One bedroom mini-flat</pre>&nbsp;
+                                        <input type="checkbox" name="homeSpecs2" value="Two Bedroom">&nbsp;<pre class="radio-inline">Two Bedroom</pre>&nbsp;
+                                        <input type="checkbox" name="homeSpecs3" value="Three Bedroom">&nbsp;<pre class="radio-inline">Three Bedroom</pre>&nbsp;
+                                        <input type="checkbox" name="homeSpecs4" value="Four Bedrooms">&nbsp;<pre class="radio-inline">Four Bedrooms</pre>&nbsp;
+                                        <input type="checkbox" name="homeSpecs5" value="Duplex">&nbsp;<pre class="radio-inline">Duplex</pre>&nbsp;
+                                        <br /><br />
+                                        <input type="checkbox" name="homeSpecs6" value="Bungalow">&nbsp;<pre class="radio-inline">Bungalow</pre>&nbsp;
+                                         Other
+                                        <input type="text" value="" name="homeSpecs7" placeholder="Pls specify...">
+                                    </div>
+                                    <br />
+                                     <div><p>7. What ranges of home values do you prefer? Select all that applies.</p>
+                                        <input type="checkbox" name="homeValueSpecs1" value="N5-7M">&nbsp;<pre class="checkbox-inline">₦5-7M</pre>&nbsp;
+                                        <input type="checkbox" name="homeValueSpecs2" value="N8-10M">&nbsp;<pre class="checkbox-inline">₦8-10M</pre>&nbsp;
+                                        <input type="checkbox" name="homeValueSpecs3" value="N10-15M">&nbsp;<pre class="checkbox-inline">₦10-15M</pre>&nbsp;
+                                        <input type="checkbox" name="homeValueSpecs4" value="N15-20M">&nbsp;<pre class="checkbox-inline">₦15-20M</pre>&nbsp;
+                                        <input type="checkbox" name="homeValueSpecs5" value="N20M+">&nbsp;<pre class="checkbox-inline">₦20+</pre>&nbsp;
+                                    </div><br>
+                                    <div class="form-group"><p>8.	Have you been involved on any mass housing project in Kwara State? </p>
+                                        <input type="radio" name="involvment" value="Yes" required>&nbsp;<pre class="radio-inline">Yes</pre>&nbsp;
+                                        <input type="radio" name="involvment" value="No" required>&nbsp;<pre class="radio-inline">No</pre>&nbsp;
+
+                                        <p>If yes, state where (locations and names of estates)</p>
+			                        	<input type="text" name="involvmentSite" placeholder="If YES pls specify, if NO leave blank..." class="form-control">
+			                        	<p>If yes, briefly mention the name and types of partners involved if any (e.g. mortgage bank, government, complementary service providers, etc.)</p>
+			                        	<textarea name="involvmentPartners" placeholder="If YES pls specify, if NO leave blank..." class="form-control"></textarea>
+                                    </div>
+                                    <div class="form-group"><p>9.	Prefered Mode of Payment</p>
+                                        <input type="radio" name="PmodeP" value="Outright purchase" required>&nbsp;<pre class="radio-inline">Outright purchase</pre>&nbsp;
+                                        <input type="radio" name="PmodeP" value="Monthly contribution" required>&nbsp;<pre class="radio-inline">Home financing</pre>&nbsp;
+                                    </div>
+                                    <div class="form-group">
+                                        <p>10. Do you have existing or past relationship with morgage providers?</p>
+                                        <input type="radio" name="MorgagePartners" value="Yes" required>&nbsp;<pre class="radio-inline">Yes</pre>&nbsp;
+                                        <input type="radio" name="MorgagePartners" value="No" required>&nbsp;<pre class="radio-inline">No</pre>&nbsp;<br><br>
+                                        <textarea name="MorgagePartnersname" placeholder="If YES pls specify, if NO leave blank..." class="form-control"></textarea>
+                                    </div>
+                                    <div class="form-group"><p>11. Are you willing to and/or capable of financing a 200+ units housing project solely?</p>
+                                        <input type="radio" value="Yes" name="capability" required>&nbsp;<pre class="radio-inline">Yes</pre>&nbsp;
+                                        <input type="radio" value="No" name="capability" required>&nbsp;<pre class="radio-inline">No</pre>&nbsp;
+                                        <p>If yes, briefly mention the name and types of partners involved if any (e.g. mortgage bank, government, complementary service providers, etc.)</p>
+                                        <textarea name="typeofPart" placeholder="If YES pls specify, if NO leave blank..." class="form-control"></textarea>
+                                    </div>
+                                    <br />
+                                    <div>
+                                        <h3>ELIGIBILITY FORM</h3>
+                                        <p>
+                            		        Is your company (or each member of the consortium) in good standing? Check all that applies:<br/> [For consortiums, each member must be able to provide each of this information]
+                            		    </p>
+                            		    <div>
+                            			    <input type="checkbox" value="I have my CAC certificate" name="eligibilityform1">&nbsp;<pre class="checkbox-inline">Evidence of Registration with Corporate Affairs Commission (CAC),<br />and Articles and Memorandum of Association</pre>&nbsp;<br /><br />
+                                            <input type="checkbox" value="I have my tax clearance form" name="eligibilityform2">&nbsp;<pre class="checkbox-inline">Tax Clearance Certificate for the last three (3) years ending December<br />2015 and VAT Certificate</pre>&nbsp;<br /><br />
+                                            <input type="checkbox" value="I have my tax clearance from KW-IRS" name="eligibilityform3">&nbsp;<pre class="checkbox-inline">Tax clearance from the Kwara State Internal Revenue Service (KW-IRS)</pre>&nbsp;<br /><br />
+                                            <input type="checkbox" value="I have accounts audit evidence" name="eligibilityform4">&nbsp;<pre class="checkbox-inline">Companies Audited Account for the last three (3) years prepared by<br />a Chartered Accounting Firm</pre>&nbsp;<br /><br />
+                                            <input type="checkbox" value="I have my bank statement and and reference letter ready" name="eligibilityform5">&nbsp;<pre class="checkbox-inline">Bank Statement of the company for the last twelve (12) months and<br />reference letter from a reputable Nigerian Bank (Original)</pre>&nbsp;<br /><br />
+                                            <input type="checkbox" value="I have a detailed Company Profile showing key personnel/officers to be attached to the project" name="eligibilityform6">&nbsp;<pre class="checkbox-inline">Detailed Company Profile showing key personnel/officers to be attached <br />to the project, stating their roles, designation,<br />qualification and experience</pre>&nbsp;<br /><br />
+                                            <input type="checkbox" value="I have veritable documentary evidence of similar jobs successfully executed" name="eligibilityform7">&nbsp;<pre class="checkbox-inline">Verifiable documentary evidence of similar jobs successfully executed in the <br />past including articulated work plans and methodology, completion certificates <br />or letters, and evidences of payments received</pre>&nbsp;
+                            		    </div>
+                            		</div>  
+                                    <br />
+			                        <button type="submit" class="btn">Submit form</button>
+			                    </form>
+                                <br />
+                                <div>
+                                    <p>Note:</p>
+                                    <p>
+                                        This form may not necessarily constitute a direct indication of consideration when the housing project begins. This means that at the time the project is to begin, each person that has indicated interest by sending this form may be contacted to determine if they are still interested in homeownership. 
+                                        Ensure that the information is complete and accurate because once the form is sent it may not be recalled AND duplicate forms will be disregard as each initial form sent will be time-stamped.
+                                    </p>
+                                </div>   
+		                    </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+        
+         <!-- Javascript -->
+        <script src="../assets/js/jquery-1.11.1.min.js"></script>
+        <script src="../assets/js/jquery.backstretch.min.js"></script>
+        <script src="../assets/js/scripts.js"></script>
+        
+        <!--[if lt IE 10]>
+            <script src="assets/js/placeholder.js"></script>
+        <![endif]-->
+    </body>
+
+</html>
